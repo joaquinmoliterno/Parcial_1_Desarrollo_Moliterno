@@ -1,8 +1,8 @@
 import unittest
 from flask import current_app
 from app import create_app
-from app.models.facultad import Facultad
 import os
+from app.models.documento import Documento
 
 class AppTestCase(unittest.TestCase):
 
@@ -14,10 +14,12 @@ class AppTestCase(unittest.TestCase):
 
     def tearDown(self):
         self.app_context.pop()
-
-    def test_app(self):
-        self.assertIsNotNone(current_app)
         
-
+    def test_documento_creation(self):
+        documento = Documento()
+        documento.tipo_documento = 'DNI'
+        self.assertIsNotNone(documento)
+        self.assertEqual(documento.tipo_documento, "DNI")
+        
 if __name__ == '__main__':
     unittest.main()
