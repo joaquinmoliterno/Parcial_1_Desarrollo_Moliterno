@@ -17,8 +17,8 @@ def create_app() -> Flask:
     app_context = os.getenv('FLASK_CONTEXT')
     #https://flask.palletsprojects.com/en/stable/api/#flask.Flask
     app = Flask(__name__)
-    app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv('DATABASE_URL', 'postgresql://postgres:221823@localhost:5432/SYSACAD')
-    app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+    f = config.factory(app_context if app_context else 'development') 
+    app.config.from_object(f)
     db.init_app(app)
     migrate.init_app(app,db)
 
