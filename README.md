@@ -22,7 +22,7 @@ SysAcad es una API REST de gestión académica construida con **Flask**, **SQLAl
 
 > En `requirements.txt` usar **un solo** driver de Postgres (psycopg2 **o** psycopg/psycopg[binary]).
 
-##Estructura del proyecto
+## Estructura del proyecto
 carpeta/app - es la carpeta contenedora de toda la logica del proyecto es donde se crea la base del proyecto y es la base donde se trabajara.
 carpeta/test - es la carpeta dedicada a los distintos test que se realizaran al proyecto para corroborar la conexion de estos con la base de datos con la cual se trabajara.
 carpeta/docker- es la carpeta que va servir para mantener ordenado el proyecto, guardar configuraciones y para facilitar el entorno de desarrollo de la aplicacion.
