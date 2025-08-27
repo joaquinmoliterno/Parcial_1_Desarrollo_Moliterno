@@ -4,13 +4,10 @@ from app.repositories.autoridad_repositorio import AutoridadRepository
 
 
 class AutoridadService:
-    """
-    Clase de servicio para la entidad Autoridad.
-    """
+
     @staticmethod
     def crear_autoridad(autoridad: Autoridad):
         """
-        Crea una nueva autoridad en la base de datos.
         :param autoridad: Objeto Autoridad a crear.
         :return: Objeto Autoridad creado.
         """
@@ -19,7 +16,6 @@ class AutoridadService:
     @staticmethod
     def buscar_por_id(id: int) -> Autoridad:
         """
-        Busca una autoridad por su id.
         :param autoridad: Objeto Autoridad a crear.
         :return: Objeto Autoridad creado.
         """
@@ -28,7 +24,6 @@ class AutoridadService:
     @staticmethod
     def buscar_todos() -> list[Autoridad]:
         """
-        Busca todas las autoridades en la base de datos.
         :return: Lista de objetos Autoridad.
         """
         return AutoridadRepository.buscar_todos()
@@ -36,7 +31,6 @@ class AutoridadService:
     @staticmethod
     def actualizar_autoridad (id: int, autoridad: Autoridad) -> Autoridad:
         """
-        Actualiza una autoridad existente en la base de datos.
         :param id: ID de la autoridad a actualizar.
         :param autoridad: Objeto Autoridad con los nuevos datos.
         :return: Objeto Autoridad actualizado.
@@ -55,7 +49,6 @@ class AutoridadService:
     @staticmethod
     def borrar_por_id(id: int) -> Autoridad:
         """
-        Borra una autoridad por su ID.
         :param id: ID de la autoridad a borrar.
         :return: Objeto Autoridad borrado o None si no se encuentra.
         """

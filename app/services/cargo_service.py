@@ -4,13 +4,10 @@ from app.repositories.cargo_repositorio import CargoRepository
 
 
 class CargoService:
-    """
-    Clase de servicio para la entidad cargos.
-    """
+
     @staticmethod
     def crear_cargo(cargo: Cargo):
         """
-        Crea una nueva cargo en la base de datos.
         :param cargo: Objeto Cargo a crear.
         :return: Objeto Cargo creado.
         """
@@ -19,7 +16,6 @@ class CargoService:
     @staticmethod
     def buscar_por_id(id: int) -> Cargo:
         """
-        Busca una cargo por su id.
         :param cargo: Objeto Cargo a crear.
         :return: Objeto Cargo creado.
         """
@@ -28,7 +24,6 @@ class CargoService:
     @staticmethod
     def buscar_todos() -> list[Cargo]:
         """
-        Busca todas las cargos en la base de datos.
         :return: Lista de objetos Cargo.
         """
         return CargoRepository.buscar_todos()
@@ -36,7 +31,6 @@ class CargoService:
     @staticmethod
     def actualizar_cargo (id: int, cargo: Cargo) -> Cargo:
         """
-        Actualiza una cargo existente en la base de datos.
         :param id: ID de la cargo a actualizar.
         :param cargo: Objeto Cargo con los nuevos datos.
         :return: Objeto Cargo actualizado.
@@ -55,7 +49,6 @@ class CargoService:
     @staticmethod
     def borrar_por_id(id: int) -> Cargo:
         """
-        Borra una cargo por su ID.
         :param id: ID de la cargo a borrar.
         :return: Objeto Cargo borrado o None si no se encuentra.
         """

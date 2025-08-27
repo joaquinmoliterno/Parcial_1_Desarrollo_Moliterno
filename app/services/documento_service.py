@@ -2,13 +2,11 @@ from app.models import Documento
 from app.repositories.documento_repositorio import DocumentoRepository
 
 class DocumentoService:
-    """
-    Servicio para gestionar las documento.
-    """
+ 
     @staticmethod
     def crear_documento(documento: Documento):
         """
-        Crea una nueva documento en la base de datos.
+
         :param documento: Documento a crear.
         :return: Documento creada.
         """
@@ -17,7 +15,6 @@ class DocumentoService:
     @staticmethod
     def buscar_por_id(id: int) -> Documento:
         """
-        Busca una documento por su ID.
         :param id: ID de la documento a buscar.
         :return: Documento encontrada o None si no se encuentra.
         """
@@ -26,7 +23,6 @@ class DocumentoService:
     @staticmethod
     def buscar_todos() -> list[Documento]:
         """
-        Busca todas las documento en la base de datos.
         :return: Lista de documento.
         """
         return DocumentoRepository.buscar_todos()
@@ -34,7 +30,6 @@ class DocumentoService:
     @staticmethod
     def actualizar_documento(id: int, documento: Documento) -> Documento:
         """
-        Actualiza una documento existente en la base de datos.
         :param id: ID de la documento a actualizar.
         :param documento: Objeto Documento con los nuevos datos.
         :return: Objeto Documento actualizada.
@@ -48,7 +43,6 @@ class DocumentoService:
     @staticmethod
     def borrar_por_id(id: int) -> Documento:
         """
-        Borra una documento por su ID.
         :param id: ID de la documento a borrar.
         :return: Objeto Documento borrado o None si no se encuentra.
         """

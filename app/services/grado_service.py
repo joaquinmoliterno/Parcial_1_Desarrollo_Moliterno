@@ -2,13 +2,11 @@ from app.models import Grado
 from app.repositories.grado_ropositorio import GradoRepository
 
 class GradoService:
-    """
-    Servicio para gestionar los grados.
-    """
+    
     @staticmethod
     def crear_grado(grado: Grado):
         """
-        Crea un nuevo grado en la base de datos.
+
         :param grado: Grado a crear.
         :return: Grado creada.
         """

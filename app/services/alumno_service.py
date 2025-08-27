@@ -2,13 +2,10 @@ from app.models import Alumno
 from app.repositories.alumno_repositorio import AlumnoRepository
 
 class AlumnoService:
-    """
-    Servicio para gestionar las Alumno.
-    """
+
     @staticmethod
     def crear_alumno(alumno: Alumno):
         """
-        Crea una nueva alumno en la base de datos.
         :param alumno: Alumno a crear.
         :return: Alumno creada.
         """
@@ -17,7 +14,6 @@ class AlumnoService:
     @staticmethod
     def buscar_por_id(id: int) -> Alumno:
         """
-        Busca una alumno por su ID.
         :param id: ID de la Alumno a buscar.
         :return: Alumno encontrada o None si no se encuentra.
         """
@@ -26,7 +22,6 @@ class AlumnoService:
     @staticmethod
     def buscar_todos() -> list[Alumno]:
         """
-        Busca todas las alumno en la base de datos.
         :return: Lista de alumno.
         """
         return AlumnoRepository.buscar_todos()
@@ -34,7 +29,6 @@ class AlumnoService:
     @staticmethod
     def actualizar_alumno(id: int, alumno: Alumno) -> Alumno:
         """
-        Actualiza una alumno existente en la base de datos.
         :param id: ID de la alumno a actualizar.
         :param alumno: Objeto Alumno con los nuevos datos.
         :return: Objeto Alumno actualizada.
@@ -54,7 +48,6 @@ class AlumnoService:
     @staticmethod
     def borrar_por_id(id: int) -> Alumno:
         """
-        Borra una alumno por su ID.
         :param id: ID de la alumno a borrar.
         :return: Objeto Alumno borrado o None si no se encuentra.
         """

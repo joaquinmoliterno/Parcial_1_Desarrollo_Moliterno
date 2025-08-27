@@ -2,13 +2,10 @@ from app.models import Especialidad
 from app.repositories.especialidad_repositorio import EspecialidadRepository
 
 class EspecialidadService:
-    """
-    Servicio para gestionar las especialidad.
-    """
+ 
     @staticmethod
     def crear_especialidad(especialidad: Especialidad):
         """
-        Crea una nueva especialidad en la base de datos.
         :param especialidad: Especialidad a crear.
         :return: Especialidad creada.
         """
@@ -17,7 +14,6 @@ class EspecialidadService:
     @staticmethod
     def buscar_por_id(id: int) -> Especialidad:
         """
-        Busca una especialidad por su ID.
         :param id: ID de la especialidad a buscar.
         :return: Especialidad encontrada o None si no se encuentra.
         """
@@ -26,7 +22,6 @@ class EspecialidadService:
     @staticmethod
     def buscar_todos() -> list[Especialidad]:
         """
-        Busca todas las especialidad en la base de datos.
         :return: Lista de Especialidad.
         """
         return EspecialidadRepository.buscar_todos()
@@ -34,7 +29,6 @@ class EspecialidadService:
     @staticmethod
     def actualizar_especialidad(id: int, especialidad: Especialidad) -> Especialidad:
         """
-        Actualiza una especialidad existente en la base de datos.
         :param id: ID de la especialidad a actualizar.
         :param especialidad: Objeto Especialidad con los nuevos datos.
         :return: Objeto Especialidad actualizada.
@@ -50,7 +44,6 @@ class EspecialidadService:
     @staticmethod
     def borrar_por_id(id: int) -> Especialidad:
         """
-        Borra una especialidad por su ID.
         :param id: ID de la especialidad a borrar.
         :return: Objeto Especialidad borrado o None si no se encuentra.
         """

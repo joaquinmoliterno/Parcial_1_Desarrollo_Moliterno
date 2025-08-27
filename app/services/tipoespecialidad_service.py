@@ -3,12 +3,10 @@ from app.repositories.tipoespecialidad_repositorio import TipoEspecialidadReposi
 
 class TipoEspecialidadService:
     """
-    Servicio para gestionar las tipo_especialidad.
     """
     @staticmethod
     def crear_tipo_especialidad(tipo_especialidad: TipoEspecialidad):
         """
-        Crea una nueva tipo_especialidad en la base de datos.
         :param tipo_especialidad: TipoEspecialidad a crear.
         :return: TipoEspecialidad creada.
         """
@@ -17,7 +15,6 @@ class TipoEspecialidadService:
     @staticmethod
     def buscar_por_id(id: int) -> TipoEspecialidad:
         """
-        Busca una tipo especialidad por su ID.
         :param id: ID de la TipoEspecialidad a buscar.
         :return: TipoEspecialidad encontrada o None si no se encuentra.
         """
@@ -26,7 +23,6 @@ class TipoEspecialidadService:
     @staticmethod
     def buscar_todos() -> list[TipoEspecialidad]:
         """
-        Busca todas las tipo_especialidad en la base de datos.
         :return: Lista de TipoEspecialidad.
         """
         return TipoEspecialidadRepository.buscar_todos()
@@ -34,7 +30,6 @@ class TipoEspecialidadService:
     @staticmethod
     def actualizar_tipo_especialidad(id: int, tipo_especialidad: TipoEspecialidad) -> TipoEspecialidad:
         """
-        Actualiza una tipo_especialidad existente en la base de datos.
         :param id: ID de la tipo_especialidad a actualizar.
         :param tipo_especialidad: Objeto TipoEspecialidad con los nuevos datos.
         :return: Objeto TipoEspecialidad actualizada.
@@ -50,7 +45,6 @@ class TipoEspecialidadService:
     @staticmethod
     def borrar_por_id(id: int) -> TipoEspecialidad:
         """
-        Borra una tipo_especialidad por su ID.
         :param id: ID de la tipo_especialidad a borrar.
         :return: Objeto TipoEspecialidad borrado o None si no se encuentra.
         """

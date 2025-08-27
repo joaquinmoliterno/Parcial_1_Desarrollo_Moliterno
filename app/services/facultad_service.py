@@ -2,13 +2,10 @@ from app.models import Facultad
 from app.repositories.facultad_repositorio import FacultadRepository
 
 class FacultadService:
-    """
-    Servicio para gestionar las facultades.
-    """
+  
     @staticmethod
     def crear_facultad(facultad: Facultad):
         """
-        Crea una nueva facultad en la base de datos.
         :param facultad: Facultad a crear.
         :return: Facultad creada.
         """
@@ -17,7 +14,6 @@ class FacultadService:
     @staticmethod
     def buscar_por_id(id: int) -> Facultad:
         """
-        Busca una facultad por su ID.
         :param id: ID de la facultad a buscar.
         :return: Facultad encontrada o None si no se encuentra.
         """
@@ -26,7 +22,6 @@ class FacultadService:
     @staticmethod
     def buscar_todos() -> list[Facultad]:
         """
-        Busca todas las facultades en la base de datos.
         :return: Lista de facultades.
         """
         return FacultadRepository.buscar_todos()
@@ -34,7 +29,6 @@ class FacultadService:
     @staticmethod
     def actualizar_facultad(id: int, facultad: Facultad) -> Facultad:
         """
-        Actualiza una facultad existente en la base de datos.
         :param id: ID de la facultad a actualizar.
         :param facultad: Objeto Facultad con los nuevos datos.
         :return: Objeto Facultad actualizada.
@@ -56,7 +50,6 @@ class FacultadService:
     @staticmethod
     def borrar_por_id(id: int) -> Facultad:
         """
-        Borra una facultad por su ID.
         :param id: ID de la facultad a borrar.
         :return: Objeto Facultad borrado o None si no se encuentra.
         """
